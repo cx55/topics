@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Call custom webhook
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"title": "${{ github.event.issue.title }}"}' https://sctapi.ftqq.com/SCT295879Tuwgk7bWtNiSTlEZf1jc4VCfJ.send
+          curl -X POST -H "Content-Type: application/json" -d '{"title": "${{ github.event.issue.title }}"}' https://sctapi.ftqq.com/${{ secrets.FT_KEY }}.send
