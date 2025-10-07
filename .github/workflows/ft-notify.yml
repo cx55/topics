@@ -9,7 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call custom webhook
-        env:
-          FT_KEY: ${{ secrets.FT_KEY }}
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"title": "${{ github.event.issue.title }}"}' "https://sctapi.ftqq.com/${FT_KEY}.send"
+          curl -X POST -H "Content-Type: application/json" -d '{"title": "${{ github.event.issue.title }}"}' https://sctapi.ftqq.com/SCT295879Tuwgk7bWtNiSTlEZf1jc4VCfJ.send
